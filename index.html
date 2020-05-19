@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPORTS_fullscreen</title>
+    <!-- 구글웹폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <!-- 내 스타일 -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 제이쿼리 cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1><img src="./images/logo.png" alt="logo"></h1>
+        <nav id="gnb">
+            <ul class="depth1">
+                <li>
+                    <a href="#">신상품</a>
+                    <ul class="depth2">
+                        <li><a href="#">남성 신상품</a></li>
+                        <li><a href="#">여성 신상품</a></li>
+                        <li><a href="#">키즈 신상품</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">신발</a>
+                    <ul class="depth2">
+                        <li><a href="#">남성 신발</a></li>
+                        <li><a href="#">여성 신발</a></li>
+                        <li><a href="#">키즈 신발</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">의류</a>
+                    <ul class="depth2">
+                        <li><a href="#">남성 상의</a></li>
+                        <li><a href="#">남성 상의</a></li>
+                        <li><a href="#">여성 상의</a></li>
+                        <li><a href="#">여성 하의</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header_right">
+            <input type="text" placeholder="      검색">
+        </div>
+    </header>
+
+    <section id="visual">
+        <video src="./images/video_title.mp4"  autoplay loop id="bg"></video>
+
+        <div class="title">
+            <!-- 애니메이션 효과 타이틀 -->
+            <h1>50%</h1>
+            <h2>REVERSE SALE</h2>
+        </div>
+
+        <button><a href="#">50% 할인 구매하기</a></button>
+
+        <div id="left">
+            <ul>
+                <li><a href="#">매장안내</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+        </div>
+
+        <div id="right">
+            <ul>
+                <li><a href="#"><img src="./images/instagram.svg" alt="인스타그램"></a></li>
+                <li><a href="#"><img src="./images/youtube.svg" alt="유튜브"></a></li>
+                <li><a href="#"><img src="./images/twitter.svg" alt="트위터"></a></li>
+                <li><a href="#"><img src="./images/facebook.svg" alt="페이스북"></a></li>
+            </ul>
+           
+            
+        </div>
+    </section>
+
+    <script>
+        $(function () {
+            // 2단계 메뉴 닫힘 (초기화)
+            $('#gnb .depth2').hide();
+
+            // hover
+            $('#gnb .depth1 > li').hover(
+                // mouseover
+                function () {
+                   
+                    // 해당 메뉴만 열림
+                    $(this)
+                        .children('.depth2')
+                        .stop().fadeIn();
+                },
+                // mouseout
+                function () {
+                    $('#gnb .depth2').stop().fadeOut();
+                },
+            );
+        })
+        
+    </script>
+
+    
+</body>
+
+</html>

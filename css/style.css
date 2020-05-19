@@ -1,0 +1,187 @@
+/* style.css */
+
+/*초기화값*/
+*{margin: 0 auto; padding: 0;}
+html,body{height: 100%;}
+ul { list-style-type: none;}
+a {text-decoration: none; color: #000;}
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+#bg {
+    position: fixed;
+            left: 0;
+            top: 0;
+            min-width: 100%;
+            min-height: 100%;
+}
+/* 헤더 */
+header {
+    width: 100%;
+    background: #fff;
+    /* width: 1200px; */
+    height: 70px;
+    /* outline: 1px solid red; */
+    position: relative;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.329);
+    z-index: 1;
+}
+header > h1 {
+    position: absolute;
+    left: 20px; top: 12px;
+}
+
+/* 메뉴 */
+#gnb {
+    position: absolute;
+    width: 100%;
+    top: 30px;
+    text-align: center;
+}
+#gnb .depth1 {
+    /* outline:  1px solid orange; */
+    display: inline-block;
+}
+/* 1단계 메뉴 */
+#gnb > .depth1 > li {
+    float: left;
+    width: 100px;
+    /* outline: 1px solid red; */
+}
+#gnb > .depth1 >li > a {
+    display: block;
+    /* background: pink; */
+    height: 40px;
+    font-size: 16px;
+    }
+
+/* 2단계 메뉴 */
+#gnb .depth2 {
+    /* outline: 1px solid green; */
+    background: #fff;
+    opacity: 0.8;
+    overflow: hidden;
+}
+/* 메뉴 선택 효과 */
+#gnb a:hover {text-decoration: underline;}
+#gnb .depth2 >li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header_right{
+    padding-top: 12px;
+    float: right;
+    padding-right: 30px;
+    
+}
+.header_right img {
+    width: 20px;
+    padding-right: 10px;
+    /* outline: 1px solid green; */
+}
+.header_right input {
+    width: 220px;
+    height: 40px;
+    /* border-left: 20px; */
+    background-image: url('../images/search-24px.svg');
+    background-position:left; 
+    background-repeat:no-repeat;
+    font-size: 16px;
+}
+.header_right input:visited {
+    background-image: none;
+}
+
+
+/* 비주얼 */
+#visual{
+    /* width: 1200px; */
+    /* position: relative; */
+    outline: 1px solid red;
+}
+video{
+    width: 1200px;
+    /* width: 100%; */
+}
+
+
+
+/* 타이틀 */
+#visual .title {
+    position: absolute;
+    left: 143px; top: 188px;
+    width: 314px; 
+    /* height: 155px; */
+    height: 200px;
+    /* outline: 1px solid pink; */
+    text-align: center;
+}
+#visual .title h1 {
+font-size: 100px;
+font-family: 'Monoton', cursive;
+font-weight: 500;
+}
+#visual .title h2 {
+font-size: 42px;
+}
+
+/* 타이틀 애니메이션 효과 */
+.title{
+    animation-name: title; /* 애니메이션 이름 지정*/
+    animation-duration: 0.8s; /* 재생시간 설정*/
+    animation-timing-function: ease-in-out; /*효과*/
+
+    /* animation-iteration-count: infinite; */
+    
+}
+@keyframes title {
+    from {
+        left: 0;
+    }
+    to {
+        left: 143px;
+    }
+}
+
+#visual button {
+    position: absolute;
+    /* outline: 1px solid orange; */
+    top: 406px; 
+    left: 154px;
+    width: 230px; height: 45px;
+    border-radius: 20px;
+    border: none;
+    background: #000;
+}
+#visual button a {
+    color: #fff;
+}
+#visual #left {
+    position: absolute;
+    left: 20px; bottom: 40px;
+}
+#visual #left ul li {
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 20px;
+    font-weight: bold;
+
+
+}
+#visual #right {
+    position: absolute;
+    right: 20px; bottom: 40px;
+}
+#visual #right ul li {
+    display: inline-block;
+}
+#visual #right ul li img {
+    width: 26px;
+    margin-left: 23px;
+    
+}
+#visual #right ul li img:hover {
+    transition: 0.5s;
+    transform: scale(1.5);
+}
