@@ -73,33 +73,34 @@ header > h1 {
     padding-top: 12px;
     float: right;
     padding-right: 30px;
-    
+    position: relative;
 }
 .header_right img {
-    width: 20px;
-    padding-right: 10px;
-    /* outline: 1px solid green; */
+    position: absolute;
+    width: 28px;
+    padding: 5px;
+    padding-top: 7px;
 }
 .header_right input {
-    width: 220px;
+    width: 200px;
     height: 40px;
-    /* border-left: 20px; */
-    background-image: url('../images/search-24px.svg');
-    background-position:left; 
-    background-repeat:no-repeat;
     font-size: 16px;
+    padding-left: 40px;
 }
-.header_right input:visited {
+/* .header_right input::placeholder{
+    padding-left: 35px;
+} */
+/* .header_right input:visited {
     background-image: none;
-}
+} */
 
 
 /* 비주얼 */
-#visual{
-    /* width: 1200px; */
-    /* position: relative; */
+/* #visual{
+    width: 1200px;
+    position: relative;
     outline: 1px solid red;
-}
+} */
 video{
     width: 1200px;
     /* width: 100%; */
